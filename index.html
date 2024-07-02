@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+<body>
+
+
+<div class="container my-5">
+<div class="row">
+<div class="system w-75 mx-auto ">
+  <h1 class="text-center  my-3 text-white">CRUD Operations</h1>
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="productName" placeholder="name@example.com">
+    <label for="productName">Product Name</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="number" class="form-control" id="productPrice" placeholder="name@example.com">
+    <label for="productPrice">product Price</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input list="cat" type="text" class="form-control" id="productCat" placeholder="name@example.com">
+    <label for="productCat">Category</label>
+    <datalist id="cat">
+      <option value="phone" />
+      <option value="tab" />
+      <option value="Screen" />
+      <option value="labtop" />
+    </datalist>
+  </div>
+  <div class="form-floating mb-3">
+    <textarea class="form-control" placeholder="Leave a comment here" id="productDesc"></textarea>
+    <label for="productDesc">Description</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="file" class="form-control" id="productimage" placeholder="name@example.com">
+    <label for="productimage">Product Image</label>
+  </div>
+  <button id="addbtn" onclick="data()" class="btn btn-pro w-25">Add Product</button>
+  <button id="upbtn" onclick="updateProduct()" class="btn btn-pro w-25 d-none">Update Product</button>
+
+  <input oninput="searchProduct()" id="searchInput"  type="search" class="form-control my-5" placeholder="Search by Name .....">
+
+
+</div>
+</div>
+</div>
+
+
+
+<div class="container mt-5">
+  <div class="row g-3 " id="rowData">
+  
+  </div>
+</div> 
+
+<script src="js/index.js"></script>
+</body>
+</html>
